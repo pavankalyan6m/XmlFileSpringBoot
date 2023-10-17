@@ -9,8 +9,8 @@ import java.io.*;
 
 @RestController
 class XmlFileController {
-	@GetMapping("/read-xml")
-    public String readXmlFile(@RequestParam String filePath) {
+	    @GetMapping("/read-xml")
+        public String readXmlFile(@RequestParam String filePath) {
         try {
             // Read the XML file from the specified file path
             BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
@@ -33,10 +33,10 @@ class XmlFileController {
         }
 	}
 	
-	//for writing into another XML file:
+	    //for writing into another XML file:
 	
-	@PostMapping("/write-xml")
-    public String writeXmlFile(@RequestParam String sourceFilePath, @RequestParam String targetFilePath) {
+	    @PostMapping("/write-xml")
+        public String writeXmlFile(@RequestParam String sourceFilePath, @RequestParam String targetFilePath) {
         try {
             // Read the XML content from the source file
             BufferedReader bufferedReader = new BufferedReader(new FileReader(sourceFilePath));
